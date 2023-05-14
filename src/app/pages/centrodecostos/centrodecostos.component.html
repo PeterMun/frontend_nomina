@@ -1,0 +1,108 @@
+
+<div class="row">
+     <div class="col-12">
+         <div class="card">
+             <div class="card-body">
+                 <!-- <h6>BIENVENIDO A CENTRO DE COSTOS</h6> -->
+                                     <!-- column -->
+                                     <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title">CENTRO DE COSTOS</h4>
+                                                <!-- <h6 class="card-subtitle">Add<code>.table-bordered</code>for borders on all sides of the table and cells.</h6> -->
+                                                <div>
+                                                    <button class="btn waves-effect waves-light btn-rounded btn-primary"
+                                                            data-toggle="modal" data-target="#exampleModal"    
+                                                    >
+                                                        <i class="mdi mdi-credit-card-plus"></i>
+                                                        Crear centro de costos
+                                                    </button>
+                                                </div>
+                                                
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title" id="exampleModalLabel1">Nuevo centro de costos</h4>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form autocomplete="off">
+                                                                    <div class="form-group">
+                                                                        <label for="recipient-name" class="control-label">Código Centro de costos:</label>
+                                                                        <input type="text" class="form-control" id="codigo">
+                                                                    </div>
+                                                                    <div class="form-group">
+                                                                        <label for="message-text" class="control-label">Nombre Centro de costos:</label>
+                                                                        <input type="text" class="form-control" id="descripcion">
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                                                                <button type="button" class="btn btn-primary" (click)="createCentroCostos()">Crear</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                               
+
+                                                <br>
+                                                <div class="table-responsive">
+                                                    <table class="table table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Código</th>
+                                                                <th>Nombre Centro de Costos</th>
+                                                                <th>Mensaje</th>
+                                                                <th class="text-nowrap">Acciones</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr *ngFor="let costo of centroCostos">
+                                                                <td > 
+                                                                    <input id="codigo"
+                                                                    type="text" 
+                                                                    class="form-control" 
+                                                                    placeholder="Nombre centro de costos" 
+                                                                    [(ngModel)]="costo.codigo"
+                                                                    disabled />
+                                                                </td>
+                                                                <td> 
+                                                                    <!-- <input type="text"
+                                                                        class="form-control"
+                                                                        
+                                                                    > -->
+                                                                    <!-- {{ costo.nombreCentroCostos }}  -->
+                                                                    <input id="descripcion"
+                                                                    type="text" 
+                                                                    class="form-control" 
+                                                                    placeholder="Nombre centro de costos" 
+                                                                    [(ngModel)]="costo.nombreCentroCostos" />
+
+                                                                </td>
+                                                                <td>{{ costo.mensaje }}</td>
+                                                                <td class="w100 text-nowrap">
+                                                                    <a (click)="updateCentroCostos( costo )" 
+                                                                    data-toggle="tooltip" 
+                                                                    class="cursor"
+                                                                    data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                                                                    <a (click)="deleteCentroCostos( costo )" 
+                                                                    data-toggle="tooltip" 
+                                                                    data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                                                                </td>
+                                                            </tr>
+                                                           
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- column -->
+            </div>
+        </div>
+    </div>
+</div>
+                

@@ -1,17 +1,19 @@
 export class Usuario {
     constructor(
         public nombreusuario: string,
-        public PERFIL: string,
-        public OBSERVACION: string,
-        public CODIGOPERFIL: string,
-        public ESTADO: string,
-        public COMPANIA: string,
-        public Emisor: string,
-        public Cargo: string,
-        public NOMBREEMISOR: string,
-        public NOMBRECOMPANIA: string,
-        public USUARIOCLIENTE: string,
-        public RucUsuario: string
+        public perfil: string,
+        public observacion: string,
+        public codigoperfil: string,
+        public estado: string,
+        public compania: string,
+        public emisor: string,
+        public cargo: string,
+        public nombreemisor: string,
+        public nombrecompania: string,
+        public usuariocliente: string,
+        public rucUsuario: string
+
+
   
     ){}
 

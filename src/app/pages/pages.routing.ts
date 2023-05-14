@@ -1,19 +1,22 @@
-import { Routes, RouterModule } from '@angular/router';
-import { NgModule } from '@angular/core';
-import { PagesComponent } from './pages.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import {  RouterModule, Routes } from "@angular/router";
+import { NgModule } from "@angular/core";
+import { PagesComponent } from "./pages.component";
+import { DashboardComponent } from "./dashboard/dashboard.component";
+import { CentrodecostosComponent } from "./centrodecostos/centrodecostos.component";
+
 
 const routes: Routes = [
-    {
-        path: 'dashboard',
+    { 
+        path: 'dashboard', 
         component: PagesComponent,
-        children: [
+        children:[
           { path: '', component: DashboardComponent },
-          //{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-        ]
-    
+          { path: 'centrocostos', component: CentrodecostosComponent },
+          // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+        ] 
       },
-     
+    
+
 ];
 
 @NgModule({
@@ -21,6 +24,5 @@ const routes: Routes = [
     exports: [ RouterModule ]
 })
 
-export class PagesRoutingModule {}
-
+export class PagesRoutingModule{}
 
