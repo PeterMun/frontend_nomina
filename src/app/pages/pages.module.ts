@@ -8,6 +8,7 @@ import { CentrodecostosComponent } from './centrodecostos/centrodecostos.compone
 import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { PlanillaComponent } from './planilla/planilla.component';
 
 
 
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     CentrodecostosComponent,
     PagesComponent,
+    PlanillaComponent,
   ],
   imports: [
     CommonModule,

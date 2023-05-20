@@ -1,0 +1,224 @@
+<p>planilla works!</p>
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <!-- <h6>BIENVENIDO A CENTRO DE COSTOS</h6> -->
+                                    <!-- column -->
+                                    <div class="col-12">
+                                       <div class="card">
+                                           <div class="card-body">
+                                               <h4 class="card-title">MOVIMIENTO PLANILLA</h4>
+                                               <!-- <h6 class="card-subtitle">Add<code>.table-bordered</code>for borders on all sides of the table and cells.</h6> -->
+                                               <div>
+                                                   <button class="btn waves-effect waves-light btn-rounded btn-primary"
+                                                           data-toggle="modal" data-target="#exampleModal"    
+                                                   >
+                                                       <i class="mdi mdi-credit-card-plus"></i>
+                                                       Crear Movimiento Planilla
+                                                   </button>
+                                               </div>
+                                               
+                                               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1">
+                                                   <div class="modal-dialog" role="document">
+                                                       <div class="modal-content">
+                                                           <div class="modal-header">
+                                                               <h4 class="modal-title" id="exampleModalLabel1">Nuevo centro de costos</h4>
+                                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                           </div>
+                                                           <div class="modal-body">
+                                                               <form autocomplete="off">
+                                                                   <div class="form-group">
+                                                                       <label for="recipient-name" class="control-label">Código Centro de costos:</label>
+                                                                       <input type="text" class="form-control" id="codigo">
+                                                                   </div>
+                                                                   <div class="form-group">
+                                                                       <label for="message-text" class="control-label">Nombre Centro de costos:</label>
+                                                                       <input type="text" class="form-control" id="descripcion">
+                                                                   </div>
+                                                               </form>
+                                                           </div>
+                                                           <div class="modal-footer">
+                                                               <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                                                               <button type="button" class="btn btn-primary" (click)="createMovimientoPlanilla()">Crear</button>
+                                                           </div>
+                                                       </div>
+                                                   </div>
+                                               </div>
+
+                                              
+
+                                               <br>
+                                               <div class="table-responsive">
+                                                   <table class="table table-bordered">
+                                                       <thead>
+                                                           <tr>
+                                                               <th>Código Concepto</th>
+                                                               <th>Concepto</th>
+                                                               <th>Aplica Iess</th>
+                                                               <th>Aplica Imp. Renta</th>
+                                                               <th>Cuenta1</th>
+                                                               <th>Cuenta2</th>
+                                                               <th>Cuenta3</th>
+                                                               <th>Cuenta4</th>
+                                                               <th>Emp. Afecta Iess</th>
+                                                               <th>Mov Exc1</th>
+                                                               <th>Mov Exc2</th>
+                                                               <th>Mov Exc3</th>
+                                                               <th>Prioridad</th>
+                                                               <th>Tipo Operacion</th>
+                                                               <th>Mensaje</th>
+                                                               <th class="text-nowrap">Acciones</th>
+                                                           </tr>
+                                                       </thead>
+                                                       <tbody>
+                                                           <tr *ngFor="let mov of planillaMov">
+                                                               <td > 
+                                                                   <input id="codigo"
+                                                                   type="text" 
+                                                                   class="form-control" 
+                                                                   [(ngModel)]="mov.codigoConcepto"
+                                                                    
+                                                                   disabled />
+                                                               </td>
+                                                               <td > 
+                                                                <input id="codigo"
+                                                                type="text" 
+                                                                class="form-control" 
+                                                                [(ngModel)]="mov.concepto"
+                                                                
+                                                                 />
+                                                            </td>
+                                                            <td > 
+                                                                <input id="codigo"
+                                                                type="text" 
+                                                                class="form-control" 
+                                                                [(ngModel)]="mov.aplica_iess"
+                                                                
+                                                                 />
+                                                            </td>
+                                                            <td > 
+                                                                <input id="codigo"
+                                                                type="text" 
+                                                                class="form-control" 
+                                                                [(ngModel)]="mov.aplica_imp_renta"
+                                                                
+                                                                 />
+                                                            </td>
+                                                            <td > 
+                                                                <input id="codigo"
+                                                                type="text" 
+                                                                class="form-control" 
+                                                                [(ngModel)]="mov.cuenta1"
+                                                                
+                                                                 />
+                                                            </td>
+                                                            <td > 
+                                                                <input id="codigo"
+                                                                type="text" 
+                                                                class="form-control" 
+                                                                [(ngModel)]="mov.cuenta2"
+                                                                
+                                                                 />
+                                                            </td>
+                                                            <td > 
+                                                                <input id="codigo"
+                                                                type="text" 
+                                                                class="form-control" 
+                                                                [(ngModel)]="mov.cuenta3"
+                                                                
+                                                                 />
+                                                            </td>
+                                                            <td > 
+                                                                <input id="codigo"
+                                                                type="text" 
+                                                                class="form-control" 
+                                                                [(ngModel)]="mov.cuenta4"
+                                                                
+                                                                 />
+                                                            </td>
+                                                            <td > 
+                                                                <input id="codigo"
+                                                                type="text" 
+                                                                class="form-control" 
+                                                                [(ngModel)]="mov.empresa_Afecta_Iess"
+                                                                
+                                                                 />
+                                                            </td>
+                                                            <td > 
+                                                                <input id="codigo"
+                                                                type="text" 
+                                                                class="form-control" 
+                                                                [(ngModel)]="mov.movimientoExcepcion1"
+                                                                
+                                                                 />
+                                                            </td>
+                                                            <td > 
+                                                                <input id="codigo"
+                                                                type="text" 
+                                                                class="form-control" 
+                                                                [(ngModel)]="mov.movimientoExcepcion2"
+                                                                
+                                                                 />
+                                                            </td>
+                                                            <td > 
+                                                                <input id="codigo"
+                                                                type="text" 
+                                                                class="form-control" 
+                                                                [(ngModel)]="mov.movimientoExcepcion3"
+                                                                
+                                                                 />
+                                                            </td>
+                                                            <td > 
+                                                                <input id="codigo"
+                                                                type="text" 
+                                                                class="form-control" 
+                                                                [(ngModel)]="mov.prioridad"
+                                                                
+                                                                 />
+                                                            </td>
+                                                            <td > 
+                                                                <input id="codigo"
+                                                                type="text" 
+                                                                class="form-control" 
+                                                                [(ngModel)]="mov.tipoOperacion"
+                                                                
+                                                                
+                                                                 />
+                                                            </td>
+                                                            <td > 
+                                                                <input id="codigo"
+                                                                type="text" 
+                                                                class="form-control" 
+                                                                [(ngModel)]="mov.mensaje"
+                                                                
+                                                                 />
+                                                            </td>
+
+                                                               
+                                                               <td class="w100 text-nowrap">
+                                                                   <a (click)="updateMovimientoPlanilla(  )" 
+                                                                   data-toggle="tooltip" 
+                                                                   class="cursor"
+                                                                   data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                                                                   <a (click)="deleteMovimientoPlanilla(  )" 
+                                                                   data-toggle="tooltip" 
+                                                                   data-original-title="Close"> <i class="fa fa-close text-danger"></i> </a>
+                                                               </td>
+                                                           </tr>
+                                                          
+                                                       </tbody>
+                                                   </table>
+                                               </div>
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <!-- column -->
+           </div>
+       </div>
+   </div>
+</div>
+               
+

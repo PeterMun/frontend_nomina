@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { PagesComponent } from "./pages.component";
 import { DashboardComponent } from "./dashboard/dashboard.component";
 import { CentrodecostosComponent } from "./centrodecostos/centrodecostos.component";
+import { PlanillaComponent } from "./planilla/planilla.component";
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
         children:[
           { path: '', component: DashboardComponent },
           { path: 'centrocostos', component: CentrodecostosComponent },
+          { path: 'movplanilla', component: PlanillaComponent },
           // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
         ] 
       },

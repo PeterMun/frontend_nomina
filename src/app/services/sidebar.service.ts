@@ -17,7 +17,8 @@ export class SidebarService {
       title: 'Mantenimiento',
       icon: '',
       submenu: [
-        { title: 'Centro de costos', url: 'centrocostos' }
+        { title: 'Centro de costos', url: 'centrocostos' },
+        { title: 'Movimiento Planilla', url: 'movplanilla' }
       ]
     }
   ]
